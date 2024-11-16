@@ -63,6 +63,8 @@ bbox<- c(-12.650070,49.968448,5.279617,59.880324) #define the coordinates of the
 map<-get_stadiamap(bbox = bbox, zoom=5, maptype = "stamen_terrain")
 ggmap(map)
 ```
+
+<center> <img src="{{ site.baseurl }}/Map_of_Uk.png" alt="Img" style="width: 800px;"/> </center>
 Here you can add some more text if you wish.
 
 ```r
