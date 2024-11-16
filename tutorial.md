@@ -63,28 +63,11 @@ bbox<- c(-12.650070,49.968448,5.279617,59.880324) #define the coordinates of the
 map<-get_stadiamap(bbox = bbox, zoom=5, maptype = "stamen_terrain")
 ggmap(map)
 ```
+![Alt text](Maps/Map_of_Uk.png)
 
-<center> <img src="{{ site.baseurl }}/"Map_of_Uk.png" alt="Img" style="width: 800px;"/> </center>
-Here you can add some more text if you wish.
 
-```r
-xy_fil <- xy %>%  # Create object with the contents of `xy`
-	filter(x_dat < 7.5)  # Keep rows where `x_dat` is less than 7.5
-```
 
-And finally, plot the data:
-
-```r
-ggplot(data = xy_fil, aes(x = x_dat, y = y_dat)) +  # Select the data to use
-	geom_point() +  # Draw scatter points
-	geom_smooth(method = "loess")  # Draw a loess curve
-```
-
-At this point it would be a good idea to include an image of what the plot is meant to look like so students can check they've done it right. Replace `IMAGE_NAME.png` with your own image file:
-
-<center> <img src="{{ site.baseurl }}/IMAGE_NAME.png" alt="Img" style="width: 800px;"/> </center>
-
-<a name="section1"></a>
+<a name="section3"></a>
 
 ## 3. The third section
 
