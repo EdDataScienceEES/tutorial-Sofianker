@@ -63,11 +63,30 @@ ggmap(map)
 ```
 ![Alt text](Maps/Map_of_Uk.png)
 
+We will continue to build off of this map. Like ggplot, <a href="https://ourcodingclub.github.io/tutorials/datavis/" target="_blank">which you can learn about here</a> , ggmaps have layers (like ogres and onions). One of the ways we can plot points onto our map is by using geom_point as a layer in our ggmap. The first bit is the same code that we made our basic map of the UK with. We then pipe and tell it we want to plot points from our data set. The syntax is the same as if you were plotting a `geom_point` graph in ggplot
+```r
+get_stadiamap(bbox, zoom = 5, maptype = "stamen_terrain") %>% ggmap() +
+  geom_point(aes(x = DecLon84, y = DecLat84), data = North_Sea, colour = "blue", size = 2)
+```
+![Alt text](Maps/Geom_Point_Map.png)
 
+Another option to produce a similar map with a little less text is to use qmplot from the ggmap package. With this option you don't need to manually add your bbox as it chooses a zoom and coordinates for you. 
+```r
+qmplot(DecLon84, DecLat84, data = North_Sea, maptype = "stamen_terrain", color = I("blue"))
+```
+![Alt text](Maps/QM_Terrain_Map.png)
+
+This is a bit clearer as we are zoomed in nicely onto the map. However, if you tried different options for your zoom and bbox with the `geom_point` graph you could get the same result. 
+
+Now if we were plotting something that was not about the environment, let's say government buildings across the UK, we might want a different style map than `stamen_terrain` .  `stamen_toner` or `stamen_toner_lite` both provide a map that would be more useful in these situations. 
+```r
+qmplot(DecLon84, DecLat84, data = North_Sea, maptype = "stamen_toner_lite", color = I("blue"))
+```
+![Alt text](Maps/QM_Toner_Map.png)
 
 <a name="section3"></a>
 
-## 3. The third section
+## 3. Mapping Statistics 
 
 More text, code and images.
 
