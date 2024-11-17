@@ -76,7 +76,22 @@ qmplot(DecLon84, DecLat84, data = North_Sea, maptype = "stamen_terrain", color =
 ```
 ![Alt text](Maps/QM_Terrain_Map.png)
 
-This is a bit clearer as we are zoomed in nicely onto the map. However, if you tried different options for your zoom and bbox with the `geom_point` graph you could get the same result. 
+This is a bit clearer as we are zoomed in nicely onto the map. However, if you tried different options for your zoom and bbox with the `geom_point` map you could get the same result. 
+
+These samples were taken by 3 different cruises. What if we wanted to show which cruises took which samples. We would simply add in the `aes()` that we want to color by the variable CruiseID from our data set. 
+```r
+get_stadiamap(bbox, zoom = 5, maptype = "stamen_terrain") %>% ggmap() +
+  geom_point(aes(x = DecLon84, y = DecLat84, colour = CruiseID), data = North_Sea, size = 2)
+```
+or in the qmplot instead of `I("your color")` you would just write the variable CruiseID
+```r
+qmplot(DecLon84, DecLat84, data = North_Sea, maptype = "stamen_terrain", color = CruiseID)
+```
+![Alt text](Maps/Geom_Cruise_Map.png)
+geom point map with cruises 
+
+![Alt text](Maps/QM_Cruise_Map.png)
+qmplot map with cruises 
 
 Now if we were plotting something that was not about the environment, let's say government buildings across the UK, we might want a different style map than `stamen_terrain` .  `stamen_toner` or `stamen_toner_lite` both provide a map that would be more useful in these situations. 
 ```r
