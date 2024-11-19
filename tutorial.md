@@ -14,7 +14,7 @@ Introduction to GGMAP
 In this tutorial we will go over the basics of using the r package ggmap and different syntaxes used to create maps. We are using Stadia maps as the source of our maps today and 
 the first section goes over how to register Stadia Maps in r
 
-You can get all of the resources for this tutorial from <a href="https://github.com/ourcodingclub/CC-EAB-tut-ideas" target="_blank">this GitHub repository</a>. Clone and download the repo as a zip file, then unzip it.
+You can get all of the resources for this tutorial from <a href="https://github.com/EdDataScienceEES/tutorial-Sofianker.git" target="_blank">this GitHub repository</a>. Clone and download the repo as a zip file, then unzip it.
 
 <a name="section1"></a>
 
