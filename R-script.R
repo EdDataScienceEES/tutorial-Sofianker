@@ -11,6 +11,7 @@ library(ggplot2)
 library(forcats)
 library(patchwork)
 library(ggdensity)
+library(RColorBrewer)
 #Load Data
 #Can be found in repository
 register_stadiamaps("d3dae1ed-f4db-43ac-b64b-c15410e3ac30",write = FALSE)
@@ -41,3 +42,5 @@ qmplot(DecLon84, DecLat84, data = North_Sea, maptype = "stamen_terrain", color =
     ) +
     scale_fill_brewer(palette = "YlOrRd") +
     theme(legend.position = "left", legend.title = element_text('density')))
+
+display.brewer.all()
