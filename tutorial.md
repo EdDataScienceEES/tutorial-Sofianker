@@ -45,6 +45,7 @@ library(ggplot2)
 library(forcats)
 library(patchwork)
 library(ggdensity)
+library(RColorBrewer)
 #Load Data
 #Can be found in repository
 North_Sea<-read_csv("FILE PATH AND FILE NAME.csv")
@@ -103,9 +104,21 @@ qmplot(DecLon84, DecLat84, data = North_Sea, maptype = "stamen_toner_lite", colo
 
 ## 3. Mapping Statistics 
 
-More text, code and images.
+While this map looks great it might be a bit overwhelming with all of the points. What if I wanted to just visualize where most of my sampling points were. We need to call back to the map of the UK we made at the beggining of this tutorial. We then add a layer using the call geom_hdr which maps density estimations. We use similar syntax to our geom_point but this time the fill equals the probability of a point being in that area. We can choose whatever color palette we want from the brewer but for our purposes the red and orange seemed to be signify density. To see all of the palette options simply run `display.brewer.all()`
+```r
+(hdr_map <- ggmap(map) + 
+    geom_hdr(
+      aes(DecLon84, DecLat84, fill = after_stat(probs)), data = North_Sea,
+      alpha = .5
+    ) +
+    scale_fill_brewer(palette = "YlOrRd") +
+    theme(legend.position = "left"))
+```
+![Alt text](Maps/Density_Map.png)
 
-This is the end of the tutorial. Summarise what the student has learned, possibly even with a list of learning outcomes. In this tutorial we learned:
+This gives us a nice visualisation of the area we sampled 
+
+
 
 ##### - how to generate fake bivariate data
 ##### - how to create a scatterplot in ggplot2
