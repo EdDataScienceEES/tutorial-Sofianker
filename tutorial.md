@@ -104,7 +104,7 @@ qmplot(DecLon84, DecLat84, data = North_Sea, maptype = "stamen_toner_lite", colo
 
 ## 3. Mapping Statistics 
 
-While this map looks great it might be a bit overwhelming with all of the points. What if I wanted to just visualize where most of my sampling points were. We need to call back to the map of the UK we made at the beggining of this tutorial. We then add a layer using the call geom_hdr which maps density estimations. We use similar syntax to our geom_point but this time the fill equals the probability of a point being in that area. We can choose whatever color palette we want from the brewer but for our purposes the red and orange seemed to be signify density. To see all of the palette options simply run `display.brewer.all()`
+While this map looks great it might be a bit overwhelming with all of the points. What if I wanted to just visualize where most of my sampling points were. We need to call back to the map of the UK we made at the beggining of this tutorial. We then add a layer using the function geom_hdr which maps density estimations. We use similar syntax to our geom_point but this time the fill equals the probability of a point being in that area. We can choose whatever color palette we want from the brewer but for our purposes the red and orange seemed to be signify density. To see all of the palette options simply run `display.brewer.all()`
 ```r
 (hdr_map <- ggmap(map) + 
     geom_hdr(
@@ -118,10 +118,10 @@ While this map looks great it might be a bit overwhelming with all of the points
 
 This gives us a nice visualisation of the area we sampled 
 
+I hope this tutorial helped you make some beautiful maps and helped you get familiar with ggmap. To summarise in this tutorial we learned
 
-
-##### - how to generate fake bivariate data
-##### - how to create a scatterplot in ggplot2
+##### - how to set up a stadiamap account and register a key
+##### - how to create ggmaps and plot data points
 ##### - some of the different plot methods in ggplot2
 
 We can also provide some useful links, include a contact form and a way to send feedback.
