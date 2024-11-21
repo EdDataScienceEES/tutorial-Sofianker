@@ -24,8 +24,10 @@ bbox<- c(-12.650070,49.968448,5.279617,59.880324)
 get_stadiamap(bbox = bbox, zoom=5, maptype = "stamen_terrain")
 ggmap(map)
 #create map using geompoint and ggmap
-get_stadiamap(bbox, zoom = 5, maptype = "stamen_terrain") %>% ggmap() +
+a<- get_stadiamap(bbox, zoom = 5, maptype = "stamen_terrain") %>% ggmap() +
   geom_point(aes(x = DecLon84, y = DecLat84, colour = CruiseID), data = North_Sea, size = 2)
+
+ggsave('test_map.png', a, width =  6, height = 6, units = 'in')
 
 #creat map using qmplot
 qmplot(DecLon84, DecLat84, data = North_Sea, maptype = "stamen_toner_lite", color = I("blue"))
