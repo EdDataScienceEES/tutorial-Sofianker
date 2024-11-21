@@ -88,7 +88,7 @@ or in the qmplot instead of `I("your color")` you would just write the variable 
 ```r
 qmplot(DecLon84, DecLat84, data = North_Sea, maptype = "stamen_terrain", color = CruiseID)
 ```
-![Alt text](Maps/Geom_Cruise_Map.png)
+![Alt text](Maps/test_map.png)
 geom point map with cruises 
 
 ![Alt text](Maps/QM_Cruise_Map.png)
@@ -124,42 +124,13 @@ I hope this tutorial helped you make some beautiful maps and helped you get fami
 ##### - how to create ggmaps and plot data points
 ##### - some of the different plot methods in ggplot2
 
-We can also provide some useful links, include a contact form and a way to send feedback.
 
-For more on `ggplot2`, read the official <a href="https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf" target="_blank">ggplot2 cheatsheet</a>.
 
-Everything below this is footer material - text and links that appears at the end of all of your tutorials.
 
 <hr>
 <hr>
 
-#### Check out our <a href="https://ourcodingclub.github.io/links/" target="_blank">Useful links</a> page where you can find loads of guides and cheatsheets.
 
-#### If you have any questions about completing this tutorial, please contact us on ourcodingclub@gmail.com
+#### If you have any questions about completing this tutorial, please contact me at ankersofiamay@gmail.com or s2274072@ed.ac.uk 
 
-#### <a href="INSERT_SURVEY_LINK" target="_blank">We would love to hear your feedback on the tutorial, whether you did it in the classroom or online!</a>
 
-<ul class="social-icons">
-	<li>
-		<h3>
-			<a href="https://twitter.com/our_codingclub" target="_blank">&nbsp;Follow our coding adventures on Twitter! <i class="fa fa-twitter"></i></a>
-		</h3>
-	</li>
-</ul>
-
-### &nbsp;&nbsp;Subscribe to our mailing list:
-<div class="container">
-	<div class="block">
-        <!-- subscribe form start -->
-		<div class="form-group">
-			<form action="https://getsimpleform.com/messages?form_api_token=de1ba2f2f947822946fb6e835437ec78" method="post">
-			<div class="form-group">
-				<input type='text' class="form-control" name='Email' placeholder="Email" required/>
-			</div>
-			<div>
-                        	<button class="btn btn-default" type='submit'>Subscribe</button>
-                    	</div>
-                	</form>
-		</div>
-	</div>
-</div>
